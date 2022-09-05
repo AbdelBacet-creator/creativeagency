@@ -1,0 +1,649 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(19, 19, 19);
+    height: 100%;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='72' patternTransform='scale(2) rotate(50)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M45.69 13.342c-1.677.945-3.557 1.6-5.48 1.588-1.922-.012-3.795-.691-5.462-1.653-1.668-.962-3.156-2.202-4.637-3.435-1.48-1.232-2.97-2.47-4.641-3.427-1.67-.957-3.547-1.628-5.47-1.628-1.923 0-3.8.67-5.47 1.628-1.67.956-3.161 2.195-4.641 3.427-1.48 1.233-2.97 2.473-4.637 3.435-1.667.962-3.54 1.641-5.463 1.653-1.922.012-3.802-.643-5.478-1.588v13.316c1.676-.945 3.556-1.6 5.478-1.588 1.923.012 3.796.691 5.463 1.653 1.668.962 3.156 2.202 4.637 3.435 1.48 1.232 2.97 2.47 4.641 3.427 1.67.957 3.547 1.628 5.47 1.628 1.923 0 3.8-.67 5.47-1.628 1.67-.956 3.161-2.195 4.641-3.427 1.48-1.233 2.97-2.473 4.637-3.435 1.667-.962 3.54-1.641 5.463-1.653 1.922-.012 3.802.643 5.478 1.588z'  stroke-width='1' stroke='hsla(259, 0%, 58%, 0.06)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,-86)' fill='url(%23a)'/></svg>")}
+p,h1,h2,h3,h4,h5,h6{cursor: default;}
+body{
+    background-color: whitesmoke;
+}
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.top-nav h3 {
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow';
+}
+
+.top-nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    gap: 3.5rem;
+    justify-self: flex-end;
+    margin-right: 4rem;
+}
+
+.top-nav li {
+    font-size: 14px;
+    transition: 300ms ease-in-out;
+    color: rgba(245, 245, 245, 0.750);
+}
+
+.top-nav li:hover {
+    color: white;
+    cursor: pointer;
+}
+.menu{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(47, 255, 147);
+    cursor: pointer;
+    transition: background-color 300ms ease-in;
+}
+.menu:hover{
+    background-color: aqua;
+
+}
+.landing-screen{
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.landing-screen h1{
+    font-size: 52px;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    text-align: center;
+    color: rgba(255, 251, 244, 0.922);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.landing-screen p{
+    color: rgb(193, 186, 167);
+    font-size: 16px;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.recent-projects{
+    margin-top: 5rem;
+    width: 100%;
+    overflow-x: scroll;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    z-index: 2;
+    overflow-y: hidden;
+    background-color: rgb(19, 19, 19);
+}
+.recent-projects::-webkit-scrollbar { 
+    display: none;
+}
+.project{
+    width: 35vw;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 300ms ease-in;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+.project:hover{
+opacity: 0.7;
+}
+.headerH3{
+    color: rgb(193, 186, 167);
+    padding: 1.5rem;
+}
+.active{
+    transition: 300ms ease-in;
+}
+.active:hover{
+    color:  rgb(47, 255, 147) !important;
+}
+.products h1{
+    font-size: 42px;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    text-align: center;
+    color: rgba(255, 251, 244, 0.922);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 4rem;
+}
+.products h4{
+    color: whitesmoke;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+.products p{
+    color: rgb(193, 186, 167);
+    font-size: 16px;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.products button{
+    border: solid 1px rgb(193, 186, 167);
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 300ms ease-in;
+}
+.products button:hover{
+    opacity: 0.5;
+}
+.companies{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    width: 60%;margin: 0 auto;
+    gap: 1rem;
+}
+.companies li{
+    color: grey;
+    font-size: 28px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.circle{
+    position: absolute;
+}
+.works{
+    width: 80%;
+    margin: 0 auto;
+}
+.works h1{
+    font-size: 42px;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    text-align: center;
+    color: rgb(19, 19, 19);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 1rem;
+}
+.works P{
+    color: rgba(19, 19, 19, 0.765);
+    font-size: 16px;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.onlymobile{
+    display: none;
+}
+.onlypc{
+    display: flex;
+}
+.ourrecentwork{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ourrecentwork button{
+    border: solid 1px rgb(19, 19, 19);
+    border-radius: 25px;
+    padding: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    box-shadow: 2px 2px black;
+    color: rgb(19, 19, 19);
+    background-color: rgb(47, 255, 147);
+    transition: 300ms ease-in;
+}
+.ourrecentwork button:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.section .image{
+    width: 35vw;
+    height:30vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image:url('https://cdn.pixabay.com/photo/2020/05/26/09/32/product-5222394_1280.jpg') ;
+    transition: 300ms ease-in;
+}
+.section .image:hover{
+    transform: scale(90%);
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: 10px 10px black;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.buttons button{
+    border: solid 1px rgba(19, 19, 19, 0.765);
+    border-radius: 25px;
+    padding: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: rgb(19, 19, 19);
+    transition: 300ms ease-in;
+}
+.buttons button:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.yourpackage{
+    width: 100%;
+    background-color: rgb(47, 255, 147);
+}
+.yourpackage h1{
+    padding-top: 1rem;
+    font-size: 42px;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    text-align: center;
+    color: rgb(19, 19, 19);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 1rem;
+}
+.yourpackage P{
+    color: rgba(19, 19, 19, 0.765);
+    font-size: 16px;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.cards .card{
+    position: relative;
+    width: 13rem;
+    height: 24rem;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-start;
+    padding:2%;
+    transition: 400ms ease-in;
+    border: solid 1px transparent;
+}
+.cards .card:hover{
+    border: solid 1px rgb(19, 19, 19);
+    box-shadow: 5px 5px rgb(19, 19, 19);
+}
+.card h3{
+    color: rgb(19, 19, 19);
+    font-size: 18px;
+}
+.card h1{
+    color: rgb(19, 19, 19);   
+    font-size: 38px;
+}
+.card p{
+    color: rgb(19, 19, 19);
+    font-size: 14px;
+}
+.card button{
+    border: solid 1px rgb(19, 19, 19);
+    border-radius: 30px;
+    padding: 0.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    bottom: 4%;
+    transition: 300ms ease-in;
+}
+.card button:hover{
+    background-color: rgb(19, 19, 19);
+    color: whitesmoke;
+}
+.line{
+    width: 90%;
+    height: 1px;
+    background-color: grey;
+}
+.lista{
+    padding-left: 5.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.lista li{
+    font-size: 14px;
+}
+.lets-discuss{
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(19, 19, 19);
+    z-index: 1;
+    transform:translateY(-15rem);
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='72' patternTransform='scale(2) rotate(50)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M45.69 13.342c-1.677.945-3.557 1.6-5.48 1.588-1.922-.012-3.795-.691-5.462-1.653-1.668-.962-3.156-2.202-4.637-3.435-1.48-1.232-2.97-2.47-4.641-3.427-1.67-.957-3.547-1.628-5.47-1.628-1.923 0-3.8.67-5.47 1.628-1.67.956-3.161 2.195-4.641 3.427-1.48 1.233-2.97 2.473-4.637 3.435-1.667.962-3.54 1.641-5.463 1.653-1.922.012-3.802-.643-5.478-1.588v13.316c1.676-.945 3.556-1.6 5.478-1.588 1.923.012 3.796.691 5.463 1.653 1.668.962 3.156 2.202 4.637 3.435 1.48 1.232 2.97 2.47 4.641 3.427 1.67.957 3.547 1.628 5.47 1.628 1.923 0 3.8-.67 5.47-1.628 1.67-.956 3.161-2.195 4.641-3.427 1.48-1.233 2.97-2.473 4.637-3.435 1.667-.962 3.54-1.641 5.463-1.653 1.922-.012 3.802.643 5.478 1.588z'  stroke-width='1' stroke='hsla(259, 0%, 58%, 0.06)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,-86)' fill='url(%23a)'/></svg>");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20vh;
+}
+.lets-discuss h1{
+    color: rgba(255, 251, 244, 0.922);
+    font-size: 42px;
+    letter-spacing: 4px;
+    word-spacing: 6px;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.input{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.input input{
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+    padding: 1rem;
+    border-bottom: solid 1.5px grey;
+    width: 75%;
+    color: whitesmoke;
+}
+::placeholder{
+    color: grey;
+}
+input:focus{
+    outline: none;
+}
+.lets-discuss button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: grey;
+    border: solid 1px grey;
+    background-color: transparent;
+    transition: 300ms ease;
+}
+.lets-discuss button:hover{
+    cursor: pointer;
+    color: whitesmoke;
+    border: solid 1px whitesmoke;
+}
+footer{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 30vh;
+    padding: 5%;
+    transform: translateY(18rem);
+}
+footer .left h3{
+    font-size: 20px;
+    color: rgb(19, 19, 19);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow';
+}
+footer p{
+    font-size: 14px;
+    line-height: 1.2rem;
+}
+footer .iconss{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+footer .iconss img{
+    border: solid 1px grey;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: 200ms ease-in;
+}
+footer .iconss img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.right{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
+    gap: 2rem;
+}
+.right ul{
+    list-style-type: none;
+    line-height: 1.8rem;
+}
+.right li{
+    font-size: 14px;
+    cursor: pointer;
+}
+.right li:hover{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1920px) {
+    .top-nav li{
+        font-size: 20px;
+    }
+    .top-nav h3{
+        font-size: 36px;
+        margin-left: 1rem;
+    }
+    .landing-screen{
+        margin-top: 12rem !important;        
+    }
+    .landing-screen h1{
+        font-size:78px !important;
+    }
+    .landing-screen p{
+        font-size: 18px !important;
+    }
+    .lets-discuss{
+        transform:translateY(-30rem) !important;
+        padding-bottom: 20vh;
+    }
+    .recent-projects{
+        margin-top: 12rem !important;
+    }
+    footer{
+        transform: translateY(44rem) !important;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .top-nav li{
+        font-size: 16px;
+    }
+    .top-nav h3{
+        margin-left: 1rem;
+        font-size: 26px;
+    }
+    .landing-screen{
+        margin-top: 8rem;        
+    }
+    .landing-screen h1{
+        font-size: 60px;
+    }
+    .landing-screen p{
+        font-size: 16px;
+    }
+    .lets-discuss{
+        width: 100%;
+        height: 70vh;
+        transform:translateY(-18rem);
+        padding-bottom: 20vh;
+    }
+    
+    footer{
+        transform: translateY(33rem);
+    }
+    
+  }
+/* For Tablet View */
+@media screen and (min-device-width: 728px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+}
+/* For Tablet View */
+@media screen and (min-device-width: 728px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 727px) and (orientation: portrait) {
+    .top-nav-bar-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }  
+    .top-nav ul {
+        display: none;
+    }
+}
+@media screen and (min-device-width: 320px) and (orientation: portrait) {
+    .top-nav {
+        padding-top: 1rem;
+        padding-right: 7.5%;
+        padding-left: 7.5%;
+    }
+    /* header{
+        height: 100vh;
+    } */
+    .landing-screen{
+        margin-top: 2.5rem;
+    }
+    .landing-screen h1{
+        font-size: 44px;
+    }
+    .landing-screen p{
+        font-size: 14px;
+    }
+    .emoji{
+        display: none;
+    }
+    .top-nav ul {
+        display: none;
+    }
+    .lets-discuss{
+        position: relative;
+    }
+    footer{
+        position: relative;
+    }
+    .products{
+        width: 95% !important;
+        margin: 0 auto;
+    }
+    .producto{
+        flex-direction: column !important;
+        width: 80% !important;
+        gap: 4rem;
+    }
+    .companies{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;    }
+    .companies li{
+        color: grey;
+        font-size: 28px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .logo{
+        width: 100px !important;
+    transform: translateX(-50%) !important;
+    }
+    .works{
+        width: 85%;
+    }    
+    .section{
+        flex-direction: column-reverse !important;
+        gap: 2rem;
+    }
+ 
+    .section .image{
+        width: 100% !important;
+        height:20rem;
+    }
+    .section .buttons{
+        flex-wrap: wrap !important;
+    }
+    .cards{
+        flex-direction: column !important;
+        padding-bottom: 5% !important;
+        z-index: 2;
+    }
+    .card{
+        padding: 2rem !important;
+        width: 60% !important;
+    }
+    .lets-discuss{
+        transform: translateY(-10%);
+        width: 80%;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-top: 50% !important;
+    }
+    .input{
+        width: 90% !important;
+        flex-direction: column !important;
+    }
+    footer{
+        transform: none;
+        flex-direction: column !important;
+        gap: 3rem;
+        padding-bottom: 70% !important;
+    }
+    .onlymobile{
+        display: flex;
+    }
+    .onlypc{
+        display: none;
+    }
+}
